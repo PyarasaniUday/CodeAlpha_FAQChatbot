@@ -82,7 +82,7 @@ It helps users quickly understand AI/ML concepts through a simple web-based chat
 ## 🌐 Live Demo
 
 ```bash
-[https://your-faq-chatbot.onrender.com/](https://codealpha-faqchatbot.onrender.com/)
+https://codealpha-faqchatbot.onrender.com/
 ```
 
 ---
