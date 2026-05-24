@@ -81,24 +81,12 @@ It helps users quickly understand AI/ML concepts through a simple web-based chat
 
 ## 🌐 Live Demo
 
-Add your deployed project link here:
-
 ```bash
 https://your-faq-chatbot.onrender.com/
 ```
 
 ---
 
-## 📌 API Endpoints
-
-| Method | Endpoint | Description |
-| --- | --- | --- |
-| GET | `/` | Opens the chatbot web page |
-| POST | `/chat` | Sends user question and returns chatbot answer |
-| GET | `/suggestions` | Returns suggested questions |
-| GET | `/health` | Checks application health |
-
----
 
 ## 📚 FAQ Dataset
 
