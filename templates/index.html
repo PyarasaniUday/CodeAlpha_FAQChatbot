@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI FAQ Chatbot built with Flask, NLTK, scikit-learn, TF-IDF, and cosine similarity.">
+    <title>AI FAQ Chatbot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="app-shell">
+        <div class="ambient-grid" aria-hidden="true"></div>
+        <div class="ai-motion-layer" aria-hidden="true">
+            <span style="--x: 6%; --y: 16%; --d: 0s;">AI</span>
+            <span style="--x: 22%; --y: 72%; --d: 1.4s;">ML</span>
+            <span style="--x: 48%; --y: 10%; --d: 2.1s;">NLP</span>
+            <span style="--x: 76%; --y: 18%; --d: 0.8s;">CNN</span>
+            <span style="--x: 88%; --y: 70%; --d: 2.8s;">ANN</span>
+            <span style="--x: 38%; --y: 86%; --d: 1.9s;">TF-IDF</span>
+        </div>
+        <section class="hero-panel" aria-labelledby="project-title">
+            <div class="status-pill">
+                <span class="status-dot"></span>
+                Online and ready
+            </div>
+
+            <h1 id="project-title">AI FAQ Chatbot</h1>
+            <p>
+                Ask beginner-friendly Artificial Intelligence and Machine Learning questions. This chatbot is specially designed for the AI/ML domain and searches a curated FAQ knowledge base to intelligently find and return the most relevant answer using NLP, TF-IDF vectorization, and cosine similarity.
+
+            </p>
+
+            <div class="workflow-card" aria-label="How the chatbot works">
+                <h2>System Pipeline</h2>
+
+                <div class="workflow-step">
+                    <span aria-hidden="true">🎤</span>
+                    <div>
+                        <strong>Input signal received</strong>
+                        <p>You can type or use voice input for AI, ML, NLP, CNN, SVM, KNN, and project questions.</p>
+                    </div>
+                </div>
+
+                <div class="workflow-step">
+                    <span aria-hidden="true">🧠</span>
+                    <div>
+                        <strong>NLTK preprocesses text</strong>
+                        <p>The backend converts text to lowercase, tokenizes it, and removes common stopwords.</p>
+                    </div>
+                </div>
+
+                <div class="workflow-step">
+                    <span aria-hidden="true">⚡</span>
+                    <div>
+                        <strong>TF-IDF maps intent</strong>
+                        <p>Each FAQ question and user query becomes a numerical vector using scikit-learn.</p>
+                    </div>
+                </div>
+
+                <div class="workflow-step">
+                    <span aria-hidden="true">🎯</span>
+                    <div>
+                        <strong>Cosine similarity resolves answer</strong>
+                        <p>The closest FAQ match is returned with a confidence score and spoken back to the user.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="chat-panel" aria-label="AI chatbot">
+            <header class="chat-header">
+                <div class="bot-identity">
+                    <div class="bot-avatar" aria-hidden="true">FAQ</div>
+                    <div>
+                        <h2>IntelliML Assistant</h2>
+                        <span><span class="inline-status-dot" aria-hidden="true"></span>Online / semantic search active</span>
+                    </div>
+                </div>
+                <button class="icon-button" id="clear-chat" type="button" title="Clear chat history" aria-label="Clear chat history">
+                    Clear
+                </button>
+            </header>
+
+            <div class="chat-box" id="chat-box" aria-live="polite"></div>
+
+            <div class="suggestions" id="suggestions" aria-label="Suggested questions">
+                {% for question in suggestions %}
+                    <button type="button" class="suggestion-chip" data-question="{{ question }}">💡 {{ question }}</button>
+                {% endfor %}
+            </div>
+
+            <form class="input-area" id="chat-form">
+                <button class="voice-button" id="voice-button" type="button" title="Voice input" aria-label="Start voice input">
+                    🎤
+                </button>
+                <input
+                    type="text"
+                    id="user-input"
+                    autocomplete="off"
+                    placeholder="Ask about AI, ML, CNN, SVM, NLP..."
+                    aria-label="Type your question"
+                >
+                <button class="send-button" type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

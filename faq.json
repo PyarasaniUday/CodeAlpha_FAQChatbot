@@ -1,0 +1,178 @@
+[
+  {
+    "question": "What is Artificial Intelligence?",
+    "answer": "Artificial Intelligence is the simulation of human intelligence by machines and computer systems."
+  },
+  {
+    "question": "What is Machine Learning?",
+    "answer": "Machine Learning is a branch of AI that allows systems to learn from data without being explicitly programmed."
+  },
+  {
+    "question": "What is Deep Learning?",
+    "answer": "Deep Learning is a subset of machine learning that uses neural networks with multiple layers."
+  },
+  {
+    "question": "What is a Neural Network?",
+    "answer": "A Neural Network is a computing system inspired by the human brain that helps machines recognize patterns and make decisions."
+  },
+  {
+    "question": "What is Generative AI?",
+    "answer": "Generative AI is a type of AI that can create new content such as text, images, music, and videos."
+  },
+  {
+    "question": "What is supervised learning?",
+    "answer": "Supervised learning is a machine learning approach where models are trained using labeled data."
+  },
+  {
+    "question": "What is unsupervised learning?",
+    "answer": "Unsupervised learning is a type of machine learning where models find patterns in unlabeled data."
+  },
+  {
+    "question": "What is reinforcement learning?",
+    "answer": "Reinforcement learning is a machine learning technique where an agent learns through rewards and penalties."
+  },
+  {
+    "question": "What is semi-supervised learning?",
+    "answer": "Semi-supervised learning combines a small amount of labeled data with a large amount of unlabeled data."
+  },
+  {
+    "question": "What is self-supervised learning?",
+    "answer": "Self-supervised learning is a method where a model generates labels from the input data itself for training."
+  },
+  {
+    "question": "What is Linear Regression?",
+    "answer": "Linear Regression is a supervised learning algorithm used to predict continuous values."
+  },
+  {
+    "question": "What is Logistic Regression?",
+    "answer": "Logistic Regression is a classification algorithm used to predict categorical outcomes."
+  },
+  {
+    "question": "What is Decision Tree?",
+    "answer": "A Decision Tree is a machine learning algorithm that makes decisions using a tree-like structure."
+  },
+  {
+    "question": "What is Random Forest?",
+    "answer": "Random Forest is an ensemble learning algorithm that combines multiple decision trees for better accuracy."
+  },
+  {
+    "question": "What is Support Vector Machine?",
+    "answer": "Support Vector Machine is a supervised learning algorithm used for classification and regression tasks."
+  },
+  {
+    "question": "What is SVM?",
+    "answer": "SVM stands for Support Vector Machine, a powerful algorithm used mainly for classification problems."
+  },
+  {
+    "question": "What is K-Nearest Neighbors?",
+    "answer": "K-Nearest Neighbors is a machine learning algorithm that classifies data based on nearby data points."
+  },
+  {
+    "question": "What is KNN?",
+    "answer": "KNN stands for K-Nearest Neighbors, a simple supervised learning algorithm used for classification."
+  },
+  {
+    "question": "What is Naive Bayes?",
+    "answer": "Naive Bayes is a probabilistic machine learning algorithm based on Bayes' theorem."
+  },
+  {
+    "question": "What is K-Means Clustering?",
+    "answer": "K-Means Clustering is an unsupervised learning algorithm used to group similar data points into clusters."
+  },
+  {
+    "question": "What is PCA in Machine Learning?",
+    "answer": "PCA stands for Principal Component Analysis and is used for dimensionality reduction."
+  },
+  {
+    "question": "What is Gradient Boosting?",
+    "answer": "Gradient Boosting is an ensemble learning technique that combines weak models to improve prediction accuracy."
+  },
+  {
+    "question": "What is NLP?",
+    "answer": "NLP stands for Natural Language Processing, a field of AI that helps machines understand human language."
+  },
+  {
+    "question": "What is Computer Vision?",
+    "answer": "Computer Vision is a field of AI that enables machines to understand and process images and videos."
+  },
+  {
+    "question": "What is CNN?",
+    "answer": "CNN stands for Convolutional Neural Network, commonly used for image recognition tasks."
+  },
+  {
+    "question": "What is RNN?",
+    "answer": "RNN stands for Recurrent Neural Network, mainly used for sequential and time-series data."
+  },
+  {
+    "question": "What is Transformer model?",
+    "answer": "Transformer models are deep learning architectures used in modern NLP systems like ChatGPT."
+  },
+  {
+    "question": "What is overfitting?",
+    "answer": "Overfitting occurs when a machine learning model learns training data too well and performs poorly on new data."
+  },
+  {
+    "question": "What is underfitting?",
+    "answer": "Underfitting occurs when a model is too simple to capture patterns in the training data."
+  },
+  {
+    "question": "What is feature engineering?",
+    "answer": "Feature engineering is the process of selecting and transforming data features to improve model performance."
+  },
+  {
+    "question": "What is training data?",
+    "answer": "Training data is the dataset used to train a machine learning model."
+  },
+  {
+    "question": "What is model accuracy?",
+    "answer": "Model accuracy measures how correctly a machine learning model makes predictions."
+  },
+  {
+    "question": "What is Flask?",
+    "answer": "Flask is a lightweight Python web framework used to build web applications and APIs. In this project, Flask connects the chatbot frontend with the AI-based FAQ matching backend."
+  },
+  {
+    "question": "What is TF-IDF?",
+    "answer": "TF-IDF stands for Term Frequency-Inverse Document Frequency. It converts text into numerical features by giving higher importance to words that are meaningful in a document but not too common across all documents."
+  },
+  {
+    "question": "What is cosine similarity?",
+    "answer": "Cosine similarity measures how close two vectors are by comparing the angle between them. In this chatbot, it compares the user's question vector with FAQ question vectors."
+  },
+  {
+    "question": "How does this chatbot work?",
+    "answer": "The chatbot preprocesses the user's question with NLTK, converts it into a TF-IDF vector using scikit-learn, compares it with FAQ vectors using cosine similarity, and returns the closest matching answer."
+  },
+  {
+    "question": "Why are NLTK and scikit-learn used?",
+    "answer": "NLTK is used for basic text preprocessing like tokenization and stopword removal. Scikit-learn is used to create TF-IDF vectors and calculate similarity between questions."
+  },
+  {
+    "question": "Can this chatbot learn automatically?",
+    "answer": "This version does not learn automatically from new conversations. It matches user questions against the FAQ dataset. You can improve it by adding more question-answer pairs to faq.json."
+  },
+  {
+    "question": "How can I improve chatbot accuracy?",
+    "answer": "You can improve accuracy by adding more FAQ questions, including alternate phrasings, tuning the confidence threshold, and expanding preprocessing with stemming or lemmatization."
+  },
+  {
+    "question": "What features are included in this project?",
+    "answer": "This project includes a Flask backend, TF-IDF and cosine similarity NLP matching, a dark futuristic UI, typing animation, voice input, text-to-speech, suggested questions, local chat history, loading states, and deployment-ready files."
+  },
+  {
+    "question": "How do I run this project locally?",
+    "answer": "Install the requirements with pip install -r requirements.txt, then run python app.py and open http://127.0.0.1:5000 in your browser."
+  },
+  {
+    "question": "How do I deploy this chatbot?",
+    "answer": "Push the project to GitHub, create a new Render Web Service, use pip install -r requirements.txt as the build command, and use gunicorn app:app as the start command."
+  },
+  {
+    "question": "What is CodeAlpha?",
+    "answer": "CodeAlpha is an internship and training platform where students build practical projects to strengthen their technical portfolio."
+  },
+  {
+    "question": "What makes this project portfolio ready?",
+    "answer": "It is portfolio ready because it has a clear problem statement, clean Flask API, explainable NLP approach, polished responsive UI, voice features, documentation, and deployment instructions."
+  }
+]
